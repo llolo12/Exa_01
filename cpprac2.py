@@ -61,13 +61,13 @@ def calcular_salarios(cb, empleados, montos_por_hora, semanas):
 
     print(f"Sub Totales: {total_horas_normales:>10} {total_horas_extras:>10} {total_bruto:>10,.0f}")
 
-# Data Entry
-num_empleados = int(input("Ingrese la cantidad de empleados: "))
-empleados = [input(f"Ingrese el nombre del empleado {i + 1}: ") for i in range(num_empleados)]
-montos_por_hora = [float(input(f"Ingrese el monto por hora para {empleados[i]}: ")) for i in range(num_empleados)]
-semanas = int(input("Ingrese la cantidad de semanas en el mes (4 o 5): "))
+# Predefined data
+empleados = ["Juan", "María", "Pedro"]
+montos_por_hora = [15.0, 20.0, 18.0]  # Example hourly rates
+semanas = 4  # Fixed to 4 weeks
 
 # Declare the time recording bucket
+num_empleados = len(empleados)
 cubo = [[[0 for _ in range(semanas)] for _ in range(6)] for _ in range(num_empleados)]
 
 # Calling functions
